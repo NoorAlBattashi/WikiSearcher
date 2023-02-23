@@ -16,7 +16,6 @@ public class Main {
     public static RequestManager requestManager = new RequestManager();
 
     public static void main(String[] args) throws IOException {
-
         requestManager.userRequest(args[0]);
 
     }

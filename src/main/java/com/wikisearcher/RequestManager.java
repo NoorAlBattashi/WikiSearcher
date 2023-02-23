@@ -3,16 +3,13 @@ package com.wikisearcher;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
-import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.net.URLEncoder;
-import java.util.HashMap;
+
 
 public class RequestManager {
     public RequestManager() {
