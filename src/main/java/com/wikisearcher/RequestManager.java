@@ -10,12 +10,27 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.net.URLEncoder;
 
-
+/**
+ * The RequestManager class handles HTTP requests to the Wikipedia API and
+ * <p>
+ * returns search results based on user input.
+ */
 public class RequestManager {
+    /**
+     * Creates a new instance of the RequestManager class.
+     */
     public RequestManager() {
 
     }
 
+    /**
+     * Sends an HTTP request to the Wikipedia API with the user input as the search query,
+     * and returns up to three search results as title and snippet pairs.
+     * If no results are found, prints a message indicating so.
+     *
+     * @param userInput the user's search query as a string
+     * @throws IOException if an I/O error occurs while sending the request
+     */
     public void userRequest(String userInput) throws IOException {
         String encodedUserInput = URLEncoder.encode(userInput);
         String apiUrl = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + encodedUserInput;
